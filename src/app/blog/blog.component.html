@@ -1,0 +1,47 @@
+<div class="container register">
+    <div class="row">
+        
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>BLOG</h2>
+               </div>
+            </div>
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+            <h3>Bienvenue</h3>
+            <p> POUR ECRIRE UN BLOG</p>
+            <input type="submit" name="" value="Login"/><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">corona</a>
+                </li>
+               
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                   
+                    <form role="form" [formGroup]="BlogForm">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 pp">
+                                <div class="form-group">
+                                    <input type="text" name="personne" id="personne" formControlName="personne" class="form-control input-sm" placeholder="nom et prenom">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 pp">
+                                <div class="form-group">
+                                    <input type="text" name="titre" id="titre" formControlName="titre" class="form-control input-sm" placeholder="titre">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group pp">
+                            <textarea type="text" name="description"  id="description" formControlName="description" class="form-control input-sm" placeholder="description" style="height: 140px;"></textarea>
+                        </div>
+                        <input type="submit" class="btnRegister pp" value="Enregistrer" (click)="addBlog()" >
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

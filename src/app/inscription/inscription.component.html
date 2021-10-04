@@ -1,0 +1,121 @@
+<!--<div class="col-md-4">
+    <strong>Send a Quick Query </strong>
+    <hr>
+    <form [formGroup]="personneForm" (ngSubmit)="addPersonne(personneForm.value)" class="form-horizontal">
+        <div class="row" [ngClass]="{'has-error':!personneForm.controls['name'].valid && personneForm.controls['name'].touched}">
+            <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" required="required" placeholder="name" formControlName="name">
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6" [ngClass]="{'has-error':!personneForm.controls['email'].valid && personneForm.controls['email'].touched}">
+                <div class="form-group">
+                    <label>email</label>
+                    <input type="text" class="form-control" required="required" placeholder="email" formControlName="email">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6" [ngClass]="{'has-error':!personneForm.controls['sexe'].valid && personneForm.controls['sexe'].touched}">
+                <div class="form-group">
+                    <label>sexe</label>
+                    <input type="text" class="form-control" required="required" placeholder="sexe" formControlName="sexe">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6" [ngClass]="{'has-error':!personneForm.controls['password'].valid && personneForm.controls['password'].touched}">
+                <div class="form-group">
+                    <label>password</label>
+                    <input type="text" class="form-control" required="required" placeholder="password" formControlName="password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" [disabled]="personneForm.valid">Submit Request</button>
+            </div>
+
+        </div>
+      <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="form-group" [ngClass]="{'has-error':!personneForm.controls['description'].valid && personneForm.controls['description'].touched}">
+                    <textarea name="message" id="message" required="required" class="form-control" rows="3" formControlName="description" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" [disabled]="personneForm.valid">Submit Request</button>
+                </div>
+            </div>
+        </div>-->
+  <!--  </form>
+</div>
+-->
+
+
+
+
+
+<div class="container register">
+    <div class="row">
+        
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>Inscription</h2>
+               </div>
+            </div>
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+            <h3>Bienvenue</h3>
+            <p>c'est un espace dedier pour l'inscription</p>
+            <input type="submit" name="" value="Login"/><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">corona</a>
+                </li>
+               
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">coronavirus blog</h3>
+                    <form [formGroup]="personneForm" (ngSubmit)="addUser()">
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="name" formControlName="name" value="" />
+                                <label position="stacked" class="error" *ngIf="!this.personneForm.get('name').valid && this.personneForm.get('name').dirty">
+                                    ce champ est obligatoire
+                                </label>
+                            </div>
+                           
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="email" formControlName="email" value="" />
+                                <label position="stacked" class="error" *ngIf="!this.personneForm.get('email').valid && this.personneForm.get('email').dirty">
+                                    ce champ est obligatoire
+                                </label>
+                            </div>
+                            
+                            
+                            <div class="form-group">
+                                <input type="password" class="form-control" value="" placeholder="password" formControlName="password"/>
+                                <label position="stacked" class="error" *ngIf="!this.personneForm.get('password').valid && this.personneForm.get('password').dirty">
+                                    ce champ est obligatoire
+                                </label>
+                            </div>
+                           
+                            <div class="form-group">
+                                <input type="text" class="form-control"  value="" placeholder="sexe" formControlName="sexe"/>
+                                <label position="stacked" class="error" *ngIf="!this.personneForm.get('sexe').valid && this.personneForm.get('sexe').dirty">
+                                    ce champ est obligatoire
+                                </label>
+                            </div>  
+                           
+                            <input type="submit" class="btnRegister"  value="inscrire" [disabled]="personneForm.invalid"/>
+                    </div>
+                </div>
+            </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

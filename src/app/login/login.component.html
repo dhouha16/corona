@@ -1,0 +1,50 @@
+<div class="container register">
+    <div class="row">
+        
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>Authentification</h2>
+               </div>
+            </div>
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+            <h3>Bienvenue</h3>
+            <p>c'est un espace dedier pour l'authentification</p>
+            <input type="submit" name="" value="inscription" routerLink="/inscription"><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">corona</a>
+                </li>
+               
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">coronavirus blog</h3>
+                    <form [formGroup]="personneForm" (ngSubmit)="login(personneForm.value)">
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="name" formControlName="email" value="" />
+                            </div>
+
+                            
+                            
+                            <div class="form-group" >
+                                <input type="password" class="form-control" value="" placeholder="password" formControlName="password"/>
+                            </div>
+                            <input type="submit" class="btnRegister"  value="login"/>
+                           
+                            
+                           
+                        
+                    </div>
+                </div>
+            </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

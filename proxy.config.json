@@ -1,0 +1,14 @@
+{
+    "/epi":{
+        "target":"https://i-o-optimized-deployment-f07363.es.eastus2.azure.elastic-cloud.com:9243",
+        "changeOrigin":true,
+        "secure":false,
+        "logLevel":"debug"
+    },
+    "/epiblog":{
+        "target":"https://i-o-optimized-deployment-f07363.es.eastus2.azure.elastic-cloud.com:9243",
+        "changeOrigin":true,
+        "secure":false,
+        "logLevel":"debug"
+    }
+}
